@@ -12,7 +12,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const windowWidth = Dimensions.get('window').width;
 
-const GSTScreen = ({ navigation }) => {
+const GSTScreen = ({navigation}) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.section1}>
@@ -21,9 +21,8 @@ const GSTScreen = ({ navigation }) => {
           <LinearGradient
             style={styles.gradientContainer}
             colors={['#FFECEE', '#FFF5F6']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-          >
+            start={{x: 0, y: 0}}
+            end={{x: 1, y: 0}}>
             <Image
               style={styles.icon}
               source={require('../Assets/images/upload-GST.png')}
@@ -39,16 +38,14 @@ const GSTScreen = ({ navigation }) => {
           <LinearGradient
             style={styles.gradientContainer}
             colors={['#E0F7F5', '#F6FBFE']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-          >
+            start={{x: 0, y: 0}}
+            end={{x: 1, y: 0}}>
             <Image
               style={styles.icon}
               source={require('../Assets/images/customer-service.png')}
             />
             <TouchableOpacity
-              onPress={() => navigation.navigate('Pay Consulting Fees')}
-            >
+              onPress={() => navigation.navigate('Pay Consulting Fees')}>
               <Text style={styles.button2}>Hire eCA</Text>
             </TouchableOpacity>
             <Text style={styles.bottomText}>
@@ -96,7 +93,7 @@ const GSTScreen = ({ navigation }) => {
         <View style={styles.bottomTiles}>
           <TouchableOpacity style={[styles.tile2]}>
             <View style={styles.firstView}>
-              <Text style={[styles.headingText, { marginBottom: 25 }]}>Blog</Text>
+              <Text style={[styles.headingText, {marginBottom: 25}]}>Blog</Text>
               <Text style={styles.bottomText2}>Know More...</Text>
             </View>
             <View style={styles.iconContainer}>
@@ -109,7 +106,9 @@ const GSTScreen = ({ navigation }) => {
 
           <TouchableOpacity style={[styles.tile2]}>
             <View style={styles.firstView}>
-              <Text style={[styles.headingText, { marginBottom: 25 }]}>Guide</Text>
+              <Text style={[styles.headingText, {marginBottom: 25}]}>
+                Guide
+              </Text>
               <Text style={styles.bottomText2}>Know More...</Text>
             </View>
             <View style={styles.iconContainer}>
@@ -195,23 +194,23 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   bottomText: {
-    fontSize:10,
+    fontSize: 10,
     marginLeft: windowWidth * 0.025,
     marginRight: windowWidth * 0.025,
     fontWeight: 'bold',
-    color:'black'
+    color: 'black',
   },
   bottomText2: {
-    fontSize:12,
+    fontSize: 12,
     lineHeight: windowWidth * 0.04,
     margin: windowWidth * 0.005,
-
+    color: 'black',
   },
   button: {
     textAlign: 'center',
     padding: windowWidth * 0.015,
     margin: windowWidth * 0.02,
-    marginLeft:0,
+    marginLeft: 0,
     width: windowWidth * 0.35,
     height: windowWidth * 0.075,
     backgroundColor: '#DF7166',
@@ -245,8 +244,8 @@ const styles = StyleSheet.create({
     marginRight: 0,
   },
   icon: {
-    height: windowWidth * 0.10,
-    width: windowWidth * 0.10,
+    height: windowWidth * 0.1,
+    width: windowWidth * 0.1,
   },
 });
 

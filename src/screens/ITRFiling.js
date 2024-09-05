@@ -13,7 +13,7 @@ import LinearGradient from 'react-native-linear-gradient';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const ITRFiling = ({ navigation }) => {
+const ITRFiling = ({navigation}) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.section1}>
@@ -22,16 +22,14 @@ const ITRFiling = ({ navigation }) => {
           <LinearGradient
             style={styles.gradientContainer}
             colors={['#EBE9FF', '#F4F1FF']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-          >
+            start={{x: 0, y: 0}}
+            end={{x: 1, y: 0}}>
             <Image
               style={styles.icon}
               source={require('../Assets/images/upload-file.png')}
             />
             <TouchableOpacity
-              onPress={() => navigation.navigate('Upload Form-16')}
-            >
+              onPress={() => navigation.navigate('Upload Form-16')}>
               <Text style={styles.button}>Upload Form 16</Text>
             </TouchableOpacity>
             <Text style={styles.bottomText}>
@@ -42,16 +40,14 @@ const ITRFiling = ({ navigation }) => {
           <LinearGradient
             style={styles.gradientContainer}
             colors={['#E0F7F5', '#F6FBFE']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-          >
+            start={{x: 0, y: 0}}
+            end={{x: 1, y: 0}}>
             <Image
               style={styles.icon}
               source={require('../Assets/images/customer-service.png')}
             />
             <TouchableOpacity
-              onPress={() => navigation.navigate('Pay Consulting Fees')}
-            >
+              onPress={() => navigation.navigate('Pay Consulting Fees')}>
               <Text style={styles.button}>Hire eCA</Text>
             </TouchableOpacity>
             <Text style={styles.bottomText}>
@@ -68,12 +64,11 @@ const ITRFiling = ({ navigation }) => {
           <View style={styles.firstView}>
             <Text style={styles.headingText}>Generate Rent Receipts</Text>
             <Text style={styles.bottomText2}>
-              Myitronline is an easy-to-use rent Receipt generator online tool
+              TaxMate360 is an easy-to-use rent Receipt generator online tool
               that helps you to produce rent receipts
             </Text>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Generate Rent Receipt')}
-            >
+              onPress={() => navigation.navigate('Generate Rent Receipt')}>
               <Text style={styles.button}>Generate Now</Text>
             </TouchableOpacity>
           </View>
@@ -89,7 +84,7 @@ const ITRFiling = ({ navigation }) => {
           <View style={styles.firstView}>
             <Text style={styles.headingText}>Generate Form 12BB</Text>
             <Text style={styles.bottomText2}>
-              Myitronline is an easy-to-use rent Receipt generator online tool
+              TaxMate360 is an easy-to-use rent Receipt generator online tool
               that helps you to produce rent receipts
             </Text>
             <TouchableOpacity>
@@ -133,6 +128,7 @@ const styles = StyleSheet.create({
   section2: {
     flex: 2,
     padding: windowWidth * 0.05,
+    // justifyContent: 'space-between',
     backgroundColor: '#F8F9FD',
   },
   mainText: {
@@ -175,6 +171,7 @@ const styles = StyleSheet.create({
   },
   bottomText2: {
     fontSize: 11,
+    color: 'black',
   },
   button: {
     textAlign: 'center',
@@ -189,10 +186,21 @@ const styles = StyleSheet.create({
   },
   firstView: {
     flex: 0.9,
+    justifyContent: 'space-around',
   },
   icon: {
     height: windowWidth * 0.15,
     width: windowWidth * 0.15,
+  },
+  iconContainer: {
+    height: windowWidth * 0.15,
+    width: windowWidth * 0.15,
+    backgroundColor: '#E0F7F5',
+    borderRadius: windowWidth * 0.075,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: windowWidth * 0.02,
+    marginRight: 0,
   },
 });
 

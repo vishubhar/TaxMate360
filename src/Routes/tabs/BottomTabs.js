@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Image, Text } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {Image, Text} from 'react-native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../../screens/HomeScreen';
 import TaxTools from '../../screens/TaxTools';
 import MyOrders from '../../screens/MyOrders';
@@ -10,12 +10,11 @@ import ITRFiling from '../../screens/ITRFiling';
 
 const Tab = createBottomTabNavigator();
 
-
 const BottomTabs = () => {
   return (
     <Tab.Navigator
       initialRouteName={HomeScreen}
-      screenOptions={({ route }) => ({
+      screenOptions={({route}) => ({
         tabBarHideOnKeyboard: true,
         tabBarStyle: [
           {
@@ -29,16 +28,15 @@ const BottomTabs = () => {
         tabBarShowLabel: true,
         tabBarActiveTintColor: 'grey',
         tabBarInactiveTintColor: 'red',
-        tabBarLabel: ({ focused, color, size }) => {
+        tabBarLabel: ({focused, color, size}) => {
           return (
             <Text
               style={{
                 fontSize: focused ? 12 : 12,
                 fontWeight: focused ? '800' : '400',
                 color: focused ? 'black' : 'grey',
-                letterSpacing: focused ? .1 : .1
-              }}
-            >
+                letterSpacing: focused ? 0.1 : 0.1,
+              }}>
               {route.name}
             </Text>
           );
@@ -48,10 +46,14 @@ const BottomTabs = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ focused }) => {
+          tabBarIcon: ({focused}) => {
             return (
               <Image
-                style={{ tintColor: focused ? 'black' : 'grey', height: focused ? 35 : 30, width: focused ? 35 : 30 }}
+                style={{
+                  tintColor: focused ? 'black' : 'grey',
+                  height: focused ? 35 : 30,
+                  width: focused ? 35 : 30,
+                }}
                 source={require('../../Assets/icons/home.png')}
               />
             );
@@ -62,10 +64,14 @@ const BottomTabs = () => {
         name="Tax Center"
         component={ITRFiling}
         options={{
-          tabBarIcon: ({ focused }) => {
+          tabBarIcon: ({focused}) => {
             return (
               <Image
-                style={{ tintColor: focused ? 'balck' : 'grey', height: focused ? 30 : 25, width: focused ? 30 : 25, }}
+                style={{
+                  tintColor: focused ? 'balck' : 'grey',
+                  height: focused ? 30 : 25,
+                  width: focused ? 30 : 25,
+                }}
                 source={require('../../Assets/icons/document.png')}
               />
             );
@@ -92,11 +98,19 @@ const BottomTabs = () => {
         component={Profile}
         options={{
           headerShown: true,
-          headerTitle: "Account Settings",
-          tabBarIcon: ({ focused }) => {
+          headerTitle: 'Account Settings',
+          headerTitleStyle: {
+            fontSize: 28,
+            color: 'black',
+          },
+          tabBarIcon: ({focused}) => {
             return (
               <Image
-                style={{ tintColor: focused ? 'balck' : 'grey', height: focused ? 30 : 25, width: focused ? 30 : 25, }}
+                style={{
+                  tintColor: focused ? 'balck' : 'grey',
+                  height: focused ? 30 : 25,
+                  width: focused ? 30 : 25,
+                }}
                 source={require('../../Assets/icons/dashboard.png')}
               />
             );
